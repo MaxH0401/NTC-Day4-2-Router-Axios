@@ -14,10 +14,11 @@ export default createStore({
       return `${state.name}:${state.job}`
     },
     fullTitle(state, getters) {
-      return `${getters.title},${state.age} 歲`
+      return `${getters.title}，${state.age} 歲`
     }
   },
   mutations: {
+
   },
   actions: {
   },
