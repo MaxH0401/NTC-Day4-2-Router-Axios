@@ -1,9 +1,8 @@
 <template>
-  <h3>state練習：{{ $store.state.message }}</h3>
-  <h4>getter練習：{{ fullTitle }}</h4>
   <h1>UserId: {{ $route.params.userId }}</h1>
   <div>Name: {{ userInfo.name }}</div>
   <div>Email: {{ userInfo.email }}</div>
+
   <hr />
   <router-link :to="`/users/${userId}/todos`"
     >{{ userInfo.name }} 的 todo</router-link
@@ -23,10 +22,6 @@ export default {
     //A01.$route.params的userId會因為跳轉使用者而改變，我們可以利用這個變數來作為"改變"事件的契機
     userId() {
       return this.$route.params.userId;
-    },
-    fullTitle(){
-      return this.$store.getters.fullTitle;
-      //getter computed
     }
   },
   watch: {
